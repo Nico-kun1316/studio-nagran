@@ -12,6 +12,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        TestKt.test("Pizza");
         var root = new StackPane();
         root.getChildren().add(new Button("Hello"));
         var scene = new Scene(root);
