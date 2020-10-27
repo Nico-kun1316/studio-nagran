@@ -20,6 +20,12 @@ repositories {
 }
 dependencies {
     testImplementation(kotlin("test-junit5"))
+    implementation(kotlin("reflect"))
+    implementation("org.xerial:sqlite-jdbc:3.32.3.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0-RC")
+    implementation("org.jetbrains.exposed:exposed-core:0.24.1")
+    implementation("org.jetbrains.exposed:exposed-dao:0.24.1")
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.24.1")
 }
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
