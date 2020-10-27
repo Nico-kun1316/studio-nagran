@@ -1,8 +1,10 @@
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class App extends Application {
 
@@ -11,10 +13,9 @@ public class App extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
         TestKt.test("Pizza");
-        var root = new StackPane();
-        root.getChildren().add(new Button("Hello"));
         var scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();

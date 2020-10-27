@@ -1,0 +1,5 @@
+.test {
+    -fx-text-fill: red;
+    -fx-text-alignment: center;
+    -fx-font-size: 34px;
+}
